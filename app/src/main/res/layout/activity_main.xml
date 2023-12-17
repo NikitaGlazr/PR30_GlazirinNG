@@ -6,30 +6,68 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:orientation="vertical"
+    <TextView
+        android:id="@+id/tvTask1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Task1"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">
+        />
 
-        <Button
-            android:id="@+id/btnStart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onClickStart"
-            android:text="@string/startserver"></Button>
+    <TextView
+        android:id="@+id/tvTask2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Task2"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTask1"
+        />
 
-        <Button
-            android:id="@+id/btnStop"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onClickStop"
-            android:text="@string/stop"></Button>
+    <TextView
+        android:id="@+id/tvTask3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Task3"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTask2"
+        />
 
-        <ProgressBar
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:indeterminate="true"></ProgressBar>
-    </LinearLayout>
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickButton1"
+        android:text="Button1"
+        app:layout_constraintTop_toBottomOf="@+id/tvTask3"
+        />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button2"
+        android:onClick="onClickButton2"
+        app:layout_constraintTop_toBottomOf="@+id/button1"
+        />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button3"
+        android:onClick="onClickButton3"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        />
+
+    <Button
+        android:id="@+id/buttonClear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickButtonClear"
+        android:text="ButtonClear"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
 </androidx.constraintlayout.widget.ConstraintLayout>
